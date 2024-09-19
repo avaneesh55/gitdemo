@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEasy</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body Style="background-color: rgb(43, 214, 226);" >
+    <header>
+      <div class="logo">
+        <img
+          src="DGTLmart.jpg"
+          alt="ShopEasy Logo"
+          style="height: 100px; width: 250px"
+        />
+      </div>
+      <nav>
+        <a href="#"><i class="fa-solid fa-house-user"></i> Home</a>
+        <a href="#"><i class="fa-solid fa-user"></i> Product</a>
+        <a href="#"><i class="fa-solid fa-phone"></i> Contact Us</a>
+        <a href="#"><i class="fa-solid fa-image"></i> Cart</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="Digital products">
+        <h2>Digital Products</h2>
+        <div class="Digital product">
+          <img src="wipro.jpg"
+           alt="Smartphone"
+           style="height: 250px; width: 150px;"   />
+          <h3>Smartphone</h3>
+          <p>"Stay Connected, Stay Ahead"</p>
+          <p>Product that you will love.</p>
+          <p>Price: $500</p>
+          <label for="quantity1">Quantity:</label>
+          <input
+            type="number"
+            id="quantity1"
+            name="quantity1"
+            value="1"
+            min="1"
+            
+          />
+          <button>Add to Cart</button>
+        </div>
+        <div class="Digital product">
+          <img src="Laptop.jpg"
+           alt="Laptop"
+           style="height: 250px; width: 300px;"   />
+          <h3>Laptop</h3>
+          <p>"Power,Performance and Portability in one sleek package"</p>
+          <p>Product that you will love.</p>
+          <p>Price: $900</p>
+          <label for="quantity1">Quantity:</label>
+          <input
+            type="number"
+            id="quantity1"
+            name="quantity1"
+            min="1"
+            value="1"
+          />
+          <button>Add to Cart</button>
+        </div>
+        <div class="Digital product">
+          <img
+            src="Watch.jpg"
+            alt="Smart Watch"
+            style="height: 250px; width: 300px"
+          />
+          <h3>Smart Watch</h3>
+          <p>product that you will enjoy.</p>
+          <p>Price: $400</p>
+          <label for="quantity2">Quantity:</label>
+          <input type="number" />
+          <button>Add to Cart</button>
+        </div>
+        <div class="Digital product">
+          <img
+            src="Tablet.jpg"
+            alt="Tablet"
+            style="height: 200px; width: 300px"
+          />
+          <h3>Tablet</h3>
+          <p>product that you will enjoy.</p>
+          <p>Price: $600</p>
+          <label for="quantity2">Quantity:</label>
+          <input type="number" />
+          <button>Add to Cart</button>
+        </div>
+      </section>
+
+      <section class="categories">
+        <h2>Categories</h2>
+        <ol>
+          <li><a href="#">Child Section</a></li>
+          <li><a href="#">Men Section</a></li>
+          <li><a href="#">Women Section</a></li>
+          
+        </ol>
+      </section>
+
+      <section class="contact">
+        <h2>Contact Us</h2>
+        <form action="#">
+          <label for="name">Name:</label></br>
+          <input type="text" id="name" name="name" /></br>
+          <label for="email">Email:</label></br>
+          <input type="email" id="email" name="email" /></br>
+          <label for="message">Message:</label></br>
+         <textarea id="message" name="message"></textarea></br>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2024 Avaneesh Singh</p>
+    </footer>
+  </body>
+</html>
