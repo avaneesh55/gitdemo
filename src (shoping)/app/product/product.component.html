@@ -1,0 +1,26 @@
+<h3 style="text-align: center">Product List</h3>
+
+<div class="row mt-2">
+  <div class="col col-md-4 offset-md-4">
+    <a class="btn btn-primary" routerLink="/New">Create</a>
+  </div>
+</div>
+
+<div class="container">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pro of productList">
+        <th scope="row">{{ pro.id }}</th>
+        <td>{{ pro.pname }}</td>
+        <td>{{ pro.price }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
