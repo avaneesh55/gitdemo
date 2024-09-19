@@ -1,0 +1,77 @@
+<!-- <div>
+<h3> Using ngFor</h3>
+<ul>
+    <li ngFor="let d of userData">
+    {{d.id}}{{d.name}}{{d.phone}}
+
+    </li>
+</ul>
+</div> -->
+<header>
+    <style>
+        
+.mat-elevation-z8 {
+    margin: 20px;
+    overflow: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color:rgb(131, 216, 112)
+  }
+ 
+    </style>
+</header>
+
+<p>user works!</p>
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="userData" class="mat-table">
+  
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let user"> {{user.id}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let user"> {{user.name}} </td>
+      </ng-container>
+  
+      <!-- Username Column -->
+      <ng-container matColumnDef="username">
+        <th mat-header-cell *matHeaderCellDef> Username </th>
+        <td mat-cell *matCellDef="let user"> {{user.username}} </td>
+      </ng-container>
+  
+      <!-- Email Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let user"> {{user.email}} </td>
+      </ng-container>
+  
+      <!-- Phone Column -->
+      <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef> Phone </th>
+        <td mat-cell *matCellDef="let user"> {{user.phone}} </td>
+      </ng-container>
+  
+      <!-- Website Column -->
+      <ng-container matColumnDef="website">
+        <th mat-header-cell *matHeaderCellDef> Website </th>
+        <td mat-cell *matCellDef="let user"> <a [href]="'http://' + user.website" target="_blank">{{user.website}}</a> </td>
+      </ng-container>
+  
+      <!-- Header and Row Declarations -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+    </table>
+  </div>
+  
+ 
+
+
+
