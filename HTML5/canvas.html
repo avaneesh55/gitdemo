@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Drawing a Line on the Canvas</title>
+<style>
+    canvas {
+        border: 1px solid #000;
+    }
+</style>
+<script>
+    window.onload = function() {
+        var canvas = document.getElementById("myCanvas"); //within the document, refere mycanvas
+        var context = canvas.getContext("2d");
+ 
+        // Draw a line
+        context.moveTo(50, 150);
+        context.lineTo(250, 50);
+        context.stroke(); //Make the line visible
+ 
+ 
+        // Draw a arc
+        context.arc(150, 150, 80, 1.2 * Math.PI, 1.8 * Math.PI, false);
+        context.stroke();
+ 
+         // Draw Rectangle
+         context.rect(50, 50, 200, 100);
+         context.stroke();
+         
+         //Draw a filled rectangle with line as border
+         context.rect(50, 50, 200, 100);
+        context.fillStyle = "#FB8B89";
+        context.fill();
+        context.lineWidth = 5;
+        context.strokeStyle = "black";
+        context.stroke();   
+    };
+</script>
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+</body>
+</html>
