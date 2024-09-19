@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Order Demo</title>
+    <style>
+        .container {
+            display: flex;
+            border: 2px solid #333;
+            margin-bottom: 20px;
+        }
+ 
+        .flex-item {
+            width: 100px;
+            height: 100px;
+            background-color: dodgerblue;
+            margin: 5px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+ 
+        .item-1 {
+            order: 3;
+        }
+ 
+        .item-2 {
+            order: 2;
+        }
+ 
+        .item-3 {
+            order: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flex-item item-1">1</div>
+        <div class="flex-item item-2">2</div>
+        <div class="flex-item item-3">3</div>
+    </div>
+</body>
+</html>

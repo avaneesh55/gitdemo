@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>justify-content in Flexbox</title>
+    <style>
+        .container {
+            display: flex;
+            border: 2px solid #333;
+            margin-bottom: 20px;
+        }
+ 
+        .flex-item {
+            width: 100px;
+            height: 100px;
+            background-color: dodgerblue;
+            margin: 5px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+ 
+        .container-justify-start {
+            justify-content: flex-start;
+        }
+ 
+        .container-justify-end {
+            justify-content: flex-end;
+        }
+ 
+        .container-justify-center {
+            justify-content: center;
+        }
+ 
+        .container-justify-space-between {
+            justify-content: space-between;
+        }
+ 
+        .container-justify-space-around {
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div class="container container-justify-start">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+ 
+    <div class="container container-justify-end">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+ 
+    <div class="container container-justify-center">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+ 
+    <div class="container container-justify-space-between">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+ 
+    <div class="container container-justify-space-around">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+</body>
+</html>
