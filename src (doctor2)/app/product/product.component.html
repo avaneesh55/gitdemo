@@ -1,0 +1,115 @@
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Examples</title>
+     Bootstrap CSS 
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        table {
+            border-collapse: separate;
+            border-spacing: 30px;
+            margin-left:auto;
+            margin-right: auto;
+            border-collapse: collapse; 
+            width: 70%; 
+        }
+       
+        tr {
+            border-bottom: 1px solid black; 
+             width:fit-content;
+            
+        }
+    </style>
+
+
+
+</head>
+<body>
+<h3 style="text-align: center; text-decoration: underline;">Product List </h3>
+    <table class="Product List">
+            
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1000</th>
+                <td>Mouse500updatred</td>
+                <td>23423</td>
+
+            </tr>
+            <tr>
+                <th scope="row">200</th>
+                <td>Mouse</td>
+                <td>23423</td>
+        
+            </tr>
+            <tr>
+                <th scope="row">10</th>
+                <td>Apple Notebook</td>
+                <td>3000</td>
+            
+            </tr>
+            <tr>
+                <th scope="row">500</th>
+                <td>Mouse500</td>
+                <td>23423</td>
+            
+            </tr>
+            <tr>
+                <th scope="row">90</th>
+                <td>Tablet900updated</td>
+                <td>9000</td>
+            
+            </tr>
+        </tbody>
+    </table>
+
+    Bootstrap JS and dependencies 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+</body>
+</html> -->
+<head>
+<style>
+   table {
+
+    th {
+  background-color: aqua;
+}
+
+}
+   </style>
+</head>
+
+
+<h3 style="text-align: center;text-decoration: underline; ">Product List</h3>
+
+<div class="container">
+    <table class="table ">
+        <thead class="thead-dark" style="background-color: aqua;">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = " let pro of productList">
+                <td scope="row">{{ pro.id }}</td>
+                <td>{{ pro.pname }}</td>
+                <td>{{ pro.price }}</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
