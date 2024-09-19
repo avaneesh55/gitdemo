@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Demo</title>
+    <style>
+        /* Universal Selector */
+        * {
+            color: blue;
+        }
+ 
+        /* Element Selector */
+        h1 {
+            font-size: 24px;
+        }
+ 
+        /* ID Selector */
+        #unique {
+            background-color: lightgray;
+        }
+ 
+        /* Class Selector */
+        .highlight {
+            font-weight: bold;
+        }
+ 
+        /* Descendant Selector */
+        div p {
+            color: green;
+        }
+ 
+        /* Child Selector */
+        ul > li {
+            list-style-type: none;
+        }
+ 
+        /* Adjacent Sibling Selector */
+        h2 + p {
+            font-style: italic;
+        }
+ 
+        /* Attribute Selector */
+        [href] {
+            text-decoration: none;
+        }
+ 
+        /* Pseudo-class Selector */
+        a:hover {
+            color: red;
+        }
+ 
+        /* Pseudo-element Selector */
+        p::first-line {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Selectors Demo</h1>
+    <div id="unique">
+        <p>This is a paragraph inside a div with an ID.</p>
+        <p class="highlight">This paragraph has a class.</p>
+        <p class="highlight">This paragraph has also has same class.</p>
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+        </ul>
+    </div>
+    <h2>Title</h2>
+    <p>This paragraph follows the h2.   <br>
+        I am second line of paragraph.
+    </p>
+    <p>This is another paragraph.</p><br>
+    I am second line of paragraph. <br>
+    <a href="#">Hover over me</a> to see hover effect.
+</body>
+</html>
