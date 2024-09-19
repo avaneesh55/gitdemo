@@ -1,0 +1,48 @@
+<p>doctor-add works!</p>
+<div class="container mt-5">
+    <h2>Add Doctor</h2>
+    <form (ngSubmit)="addDoctor()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          [(ngModel)]="doctor.name"
+          name="name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="specialization">Specialization</label>
+        <input
+          type="text"
+          class="form-control"
+          id="specialization"
+          [(ngModel)]="doctor.specialization"
+          name="specialization"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="experience">Experience</label>
+        <input
+          type="number"
+          class="form-control"
+          id="experience"
+          [(ngModel)]="doctor.experience"
+          name="experience"
+          required
+        />
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [ngStyle]="{
+          'background-color': doctor.experience > 10 ? 'green' : 'blue'
+        }"
+      >
+        Add Doctor
+      </button>
+    </form>
+  </div>
