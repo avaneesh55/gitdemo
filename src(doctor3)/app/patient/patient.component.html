@@ -1,0 +1,35 @@
+<div class="container-fluid" style="padding: 20px;">
+   <table class="table table-success table-striped-columns table-hover">
+      <thead class="table-dark">
+         <tr>
+            <th>ID</th>
+            <th>Patient Name</th>
+            <th>Address</th>
+            <th>age</th>
+            <th>Gender</th>
+            <th>Contact</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr *ngFor='let pat of patientFrom'>
+            <td>{{pat.patientId}}</td>
+            <td>{{pat.patientName | uppercase}}</td>
+            <td>{{pat.address | titlecase}}</td>
+            <td>{{pat.age}}</td>
+            <td>{{pat.gender | lowercase}}</td>
+            <td>{{pat.phone}}</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+
+<!-- 
+{
+    "patientId": 0,
+    "patientName": "Komal",
+    "gender": "female",
+    "age": 31,
+    "phone": "45678",
+    "address": "jaipur"
+  }, -->

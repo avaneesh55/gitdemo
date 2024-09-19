@@ -1,0 +1,61 @@
+<head>
+<style>
+   th{
+
+      background-color: rgb(0, 242, 255);
+   }
+</style>
+</head>
+<div class="container">
+   <div class="row g-3" >
+      <div class="col-md-4">
+      </div>
+
+      <div class="col-md-4" style="padding: 10px; text-align: center;">
+         <h5>Search</h5>
+         <input type="text" class="form-control" placeholder="Enter Doctor Name" [(ngModel)]="filter">
+      </div>
+   </div>
+
+   <div>
+      <table class="table table-success table-striped-columns table-hover">
+         <thead class="table-hover">
+            <tr >
+               <th>ID</th>
+               <th>FirstName</th>
+               <th>Address</th>
+               <th>Contact</th>
+               <th>Experience</th>
+               <th>Degree</th>
+               <th>Fees</th>
+               <th>Patient-List</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr *ngFor='let doc of doctorList | search :filter '>
+               <td>{{doc.docId}}</td>
+               <td>{{doc.docName | uppercase}}</td>
+               <td>{{doc.address | titlecase}}</td>
+               <td>{{doc.phone}}</td>
+               <td>{{doc.exprnc | lowercase}}</td>
+               <td>{{doc.qualification}}</td>
+               <td>{{doc.basicFee}}</td>
+               <td>
+                  <button type="button" class="btn btn-warning" [routerLink]="['/patient',doc.docId]">Patient</button>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</div>
+
+<!-- {
+   "docName": "Alex",
+   "qualification": "Mbbs",
+   "exprnc": "5",
+   "phone": "456789",
+   "address": "mumbai",
+   "specialization": "Heart",
+   "basicFee": 1000,
+   "docId": 1
+ }, -->
